@@ -25,8 +25,8 @@ app.get("/getFiles",(req,res)=>{
     let storage=fs.readdirSync("./Files")
     res.send(storage.sort())
 })
+var port = process.env.PORT || 3001;
 
-
-app.listen(3001,()=>{
+app.listen(port,()=>{
     console.log("Server listening on port 3001")
 })
