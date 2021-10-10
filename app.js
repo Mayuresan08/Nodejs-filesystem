@@ -12,7 +12,7 @@ fs.mkdirSync("Files")
 //create file 
 app.get("/createFile",(req,res,next)=>{
     let date=new Date()
-    let fileName=`${date.toISOString()}.txt`
+//     let fileName=`${date.toISOString()}.txt`
     fileName =fileName.slice(0,19).replace(/:/g,"-")
     let data=`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     console.log(fileName,typeof data)
